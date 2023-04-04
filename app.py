@@ -6,7 +6,7 @@ from flask_cors import CORS, cross_origin # para que no genere errores de CORS a
 
 from Backend.blueprints.task_blueprint import task_blueprint
 
-app = Flask(__name__)
+app = Flask(__name__,template_folder='Frontend',static_folder='Frontend/static')
 # para que utilice vue compilado ( npm run build ). En la carpeta dist, esta lo compilado de vue
 # app = Flask(__name__, template_folder= './Frontend')
 
