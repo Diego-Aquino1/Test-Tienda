@@ -1,11 +1,62 @@
-
+html
+{
+    height: 100%;
+}
 body
 {
     background: #0F2027;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to l, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     color:aliceblue;
-    font-family: 'Mukta', sans-serif;  
+    font-family: 'Mukta', sans-serif;
+    min-height: 100%;
+}
+
+.grid-container
+{
+    display: grid;
+    gap: 10px;
+    grid-template: 
+    "header"  70px
+    "nav"     60px
+    "main"    auto
+    "aside"   80px
+    "footer"  70px;
+}
+
+.header
+{
+  grid-area: header;
+  background-color: black;
+  border-radius: 20px;
+}
+
+.main
+{
+  grid-area: main;
+  background-color: black;
+  border-radius: 20px;
+}
+
+.nav
+{
+ grid-area: nav;
+ background-color: black;
+ border-radius: 20px;
+}
+
+.aside
+{
+  grid-area: aside;
+  background-color: black;
+  border-radius: 20px;
+}
+
+.footer
+{
+  grid-area: footer;
+  background-color: black;
+  border-radius: 20px;
 }
 
 .hero-section {
