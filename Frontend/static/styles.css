@@ -1,3 +1,5 @@
+/* GENERAL */
+
 html
 {
     height: 100%;
@@ -11,6 +13,8 @@ body
     font-family: 'Mukta', sans-serif;
     min-height: 100%;
 }
+
+/* GRID */
 
 .grid-container
 {
@@ -58,6 +62,32 @@ body
   background-color: black;
   border-radius: 20px;
 }
+
+@media (min-width:600px)
+{
+  .grid-container
+  {
+    grid-template: 
+    "header header"  50px
+    "nav    nav"     40px
+    "main   aside"   auto
+    "footer footer"  60px /
+    auto    200px;
+  }
+}
+
+@media (min-width:900px)
+{
+  .grid-container
+  {
+    grid-template: 
+    "header header  header"  60px
+    "nav    main    aside"   auto
+    "footer footer  footer"  70px /
+    200px   auto    200px;
+  }
+}
+
 
 .hero-section {
     display: flex;
