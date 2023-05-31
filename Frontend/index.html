@@ -11,6 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@500&display=swap" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
+<script src="../static/main.js"></script>
 <body class="grid-container">
     <header class="header">
       <div class="header_main">
@@ -18,12 +19,12 @@
           <p>LOGO</p>
         </div>
         <div class="header_menu">
-          <p>MENU</p>
+          <button id="menubutton">MENU</button>
         </div>
         <div class="header_searchbar">
           <div class="search_container">
             <i class='bx bx-search'></i>
-            <input type="search" placeholder="Buscar...">
+            <input type="text" placeholder="Buscar...">
           </div>
         </div>
         <div class="header_extras">
@@ -32,6 +33,14 @@
         </div>
       </div>
     </header>
+    <div class="menuleft" id="menu">
+      <button id="menubutton2">Salir</button>
+      <ul class="menuitems">
+        <li><a href="#"> Primera opcion</a></li>
+        <li><a href="#"> Segunda opcion</a></li>
+        <li><a href="#"> Tercera opcion</a></li>
+      </ul>
+    </div>
     <main class="main">
       <h2>MAIN</h2>
       <section>
@@ -93,4 +102,7 @@
     </footer>
     
 </body>
+
+<script src="../Frontend/static/main.js"> </script>
+
 </html>
