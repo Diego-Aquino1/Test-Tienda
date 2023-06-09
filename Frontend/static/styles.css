@@ -13,10 +13,8 @@ html
 }
 body
 {
-    background: #0F2027;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to l, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    color:aliceblue;
+    background: rgb(200, 200, 200);
+    color: whitesmoke;
     font-family: 'Mukta', sans-serif;
     min-height: 100%;
     margin: 0;
@@ -113,19 +111,58 @@ body
 
 .menuleft{
   top:0;
-  background-color: red;
+  background-color: rgb(230, 230, 230);
   position: fixed;
   height: 100%;
   width: 25%;
   left: -25%;
   transition: left 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .menuleft.open{
   left: 0;
 }
 
-.menuleft 
+.menuleft button{
+  background-color: var(--principal);
+  color: white;
+  width: 50%;
+  border-radius: 15px;
+  height: 50px; 
+}
+
+.menuleft button:hover{
+  background-color: var(--secundary);
+}
+
+.menuitems{
+  width: 80%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  list-style-type: none;
+  padding: 0;
+}
+
+/* CAMBIAR MARGIN*/
+
+.menuitems li{
+  margin: 20px;
+  cursor: pointer;
+  list-style: none;
+}
+
+.menuitems li a{
+  text-decoration: none;
+  color: var(--principal);
+}
+
 
 /* GRID */
 
@@ -137,7 +174,6 @@ body
     "header"  70px
     "nav"     60px
     "main"    auto
-    "aside"   80px
     "footer"  70px;
 }
 
@@ -151,7 +187,7 @@ body
 .main
 {
   grid-area: main;
-  background-color: black;
+  background-color: whitesmoke;
   border-radius: 20px;
 }
 
@@ -173,7 +209,7 @@ body
 {
   grid-area: footer;
   background-color: black;
-  border-radius: 20px;
+  border-radius: 0px;
 }
 
 @media (min-width:600px)
@@ -183,7 +219,7 @@ body
     grid-template: 
     "header header"  75px
     "nav    nav"     40px
-    "main   aside"   auto
+    "main   main"   auto
     "footer footer"  60px /
     auto    200px;
   }
@@ -195,7 +231,7 @@ body
   {
     grid-template: 
     "header header  header"  75px
-    "nav    main    aside"   auto
+    "nav    main    main"   auto
     "footer footer  footer"  70px /
     200px   auto    200px;
   }
@@ -208,30 +244,7 @@ body
   width: 80%;
 }
 
-.slides
-{
-  width: 80%;
-}
 
-.first-slide
-{
-  width: 80%;
-}
-
-.slide
-{
-  width: 80%;
-}
-
-.first-slide img
-{
-  width: 200%;
-}
-
-.slide img
-{
-  width: 50%;
-}
 
 .hero-section {
     display: flex;
