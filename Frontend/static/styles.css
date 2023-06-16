@@ -133,6 +133,8 @@ body
   width: 50%;
   border-radius: 15px;
   height: 50px; 
+  border: none;
+  cursor: pointer;
 }
 
 .menuleft button:hover{

@@ -26,11 +26,11 @@ body{
     border-style: solid;
     border-color: black;
     border-radius: 5px;
-    width: 45%;
+    width: 35%;
 }
 
 .maininfo{
-    width: 35%;
+    width: 25%;
     text-align: center;
     font-size: 40px;
 }
@@ -47,31 +47,53 @@ body{
 
 .contacto input{
     padding-left: 12px;
-    height: 40px;
+    height: 48px;
     border: solid 0.5px;
     border-radius: 3px;
     border-color: darkgray;
     background-color: black;
+    color: white;
 }
 
 .contacto input::placeholder{
     font-size: small;
 }
 
+.contacto input:active{
+    border-color: var(--secundary_color);
+}
+
 .bot_contacto{
     margin-top: 10px;
     display: flex;
     align-items: center;
+    
 }
 
-.bot_contacto input[type="checkbox"]{
+input[type="checkbox"] {
+    content: "✔";
+    height: 18px;
+    width: 18px;
+    appearance: none;
     background-color: black;
-    border-color: darkgrey;
-    border: solid;
+    border: solid 0.5px;
+    cursor: pointer;
+    border-color: var(--secundary_color);
+}
+
+input[type="checkbox"]:disabled{
+    border-color: var(--secundary_color);
+}
+
+input[type="checkbox"]:checked {
+    content: "✔";
+    color: white;
+    background-color: var(--secundary_color);
 }
 
 .bot_contacto label{
     margin-left: 10px;
+    cursor: pointer;
 }
 
 .header_contacto{
@@ -93,24 +115,44 @@ body{
     flex-direction: column;
 }
 
-.envio{
+.envio1{
     display: flex;
     padding-left: 12px;
     gap: 12px;
     align-items: center;
-    height: 45px;
+    height: 50px;
     border: solid 0.5px;
     border-color: var(--principal_color);
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
 }
 
-.recojo{
+.envio1:active{
+    border-color: var(--secundary_color);
+}
+
+.recojo1:active{
+    border-color: var(--secundary_color);
+}
+
+input[type="radio"]:checked + label {
+    font-weight: bold;
+}
+
+.envio1.activo{
+    border-color: var(--secundary_color);
+}
+
+.recojo1.activo{
+    border-color: var(--secundary_color);
+}
+
+.recojo1{
     display: flex;
     padding-left: 12px;
     gap: 12px;
     align-items: center;
-    height: 45px;
+    height: 50px;
     border: solid 0.5px;
     border-color: var(--principal_color);
     border-bottom-left-radius: 5px;
@@ -118,7 +160,23 @@ body{
 }
 
 .pago{
+    position: relative;
+}
 
+.pago button{
+    position: absolute;
+    width: 180px;
+    height: 65px;
+    border: none;
+    background-color: red;
+    color: white;
+    border-radius: 5px;
+    margin-top: 20px;
+    right: 0;
+}
+
+.pago button:hover{
+    background-color: rgb(202, 0, 0);
 }
 
 #envio_main,
