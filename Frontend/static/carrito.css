@@ -1,36 +1,40 @@
 :root{
     --principal_color: dimgrey;
     --secundary_color: deepskyblue;
+    --contrast_color: rgb(129,129,129);
 }
 
 body{
-    background-color: dimgrey;
+    background-color: black;
     color: white;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: small;
+    font-size: 12px;
     margin : 0;
 }
 
 .containermain{
     width: 100%;
-    height: 90%;   
+    height: 100%;
     background-color: black;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
 }
 
 .maincompra{
-    padding: 7%;
-    border: 2px;
-    border-style: solid;
-    border-color: black;
-    border-radius: 5px;
-    width: 35%;
+    align-self: flex-start;
+    padding: 6%;
+    padding-bottom: 8%;
+    padding-top: 6%;
+    border-right: solid 0.5px;
+    border-color: var(--contrast_color);
+    width: 37.8%;
+    min-height: 100%;
+    height 80vh;
 }
 
 .maininfo{
-    width: 25%;
+    width: 27.5%;
     text-align: center;
     font-size: 40px;
 }
@@ -38,6 +42,10 @@ body{
 .header{
     font-size: 40px;
     text-align: center;
+}
+
+.header img{
+    width: 40%;
 }
 
 .contacto{
@@ -48,19 +56,17 @@ body{
 .contacto input{
     padding-left: 12px;
     height: 48px;
-    border: solid 0.5px;
+    border: 0.5px solid ;
     border-radius: 3px;
-    border-color: darkgray;
+    border-color: var(--contrast_color);
     background-color: black;
     color: white;
 }
 
-.contacto input::placeholder{
-    font-size: small;
-}
-
-.contacto input:active{
-    border-color: var(--secundary_color);
+input[type="text"]:focus{
+    border: transparent;
+    outline: 1px solid var(--secundary_color);
+    transform: 3ms;
 }
 
 .bot_contacto{
@@ -120,11 +126,23 @@ input[type="checkbox"]:checked {
     padding-left: 12px;
     gap: 12px;
     align-items: center;
-    height: 50px;
+    height: 55px;
     border: solid 0.5px;
     border-color: var(--principal_color);
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
+}
+
+.recojo1{
+    display: flex;
+    padding-left: 12px;
+    gap: 12px;
+    align-items: center;
+    height: 55px;
+    border: solid 0.5px;
+    border-color: var(--principal_color);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
 
 .envio1:active{
@@ -133,6 +151,24 @@ input[type="checkbox"]:checked {
 
 .recojo1:active{
     border-color: var(--secundary_color);
+}
+
+input[type="radio"]{
+    appearance: none;
+    border: none;
+    background-color: whitesmoke;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+}
+
+input[type="radio"]:checked{
+    appearance: none;
+    background-color: var(--secundary_color);
+    border-radius: 50%;
+    width: 14px;
+    height: 14px;
+    border: 2px solid var(--secundary_color);
 }
 
 input[type="radio"]:checked + label {
@@ -147,16 +183,48 @@ input[type="radio"]:checked + label {
     border-color: var(--secundary_color);
 }
 
-.recojo1{
+.recojo_fot{
+    color: var(--contrast_color);
+}
+
+.tienda{
     display: flex;
-    padding-left: 12px;
-    gap: 12px;
-    align-items: center;
-    height: 50px;
+    flex-direction: row;
     border: solid 0.5px;
-    border-color: var(--principal_color);
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
+    border-color: var(--secundary_color);
+    border-radius: 5px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 17px;
+}
+
+.tiendaizq{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.tiendader{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.tienda_main{
+    font-weight: bold;
+    font-size: 14px;
+    color: white;
+    margin: 0;
+}
+
+.tienda_fot{
+    margin: 0;
+    color: rgb(129,129,129);
+}
+
+.tiendader p.tienda_main{
+    right: 0px;
 }
 
 .pago{
